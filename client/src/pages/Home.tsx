@@ -7,7 +7,7 @@ import { useState, useEffect, useRef } from "react";
 
 // ─── Image CDN URLs ───────────────────────────────────────────────────────────
 const IMG = {
-  hero:    "https://d2xsxph8kpxj0f.cloudfront.net/310519663425645252/c7JUUxiJwSoLXah9sUySh8/hero_caramels-oAcC7qqhGStu2ySk5mYKXG.webp",
+  hero:    "https://d2xsxph8kpxj0f.cloudfront.net/310519663425645252/c7JUUxiJwSoLXah9sUySh8/hero_caramels_new_b1727486.jpg",
   variety: "https://d2xsxph8kpxj0f.cloudfront.net/310519663425645252/c7JUUxiJwSoLXah9sUySh8/caramels_variety-kdvCjKcomRHJp7T4MyEDaz.webp",
   gift:    "https://d2xsxph8kpxj0f.cloudfront.net/310519663425645252/c7JUUxiJwSoLXah9sUySh8/gift_box_caramels-3bwS7sbWweTKYH5wvaahA4.webp",
   making:  "https://d2xsxph8kpxj0f.cloudfront.net/310519663425645252/c7JUUxiJwSoLXah9sUySh8/caramel_making-CEVfeHVhRhXAPf5oNSKcek.webp",
