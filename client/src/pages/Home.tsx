@@ -13,6 +13,22 @@ const IMG = {
   making:  "https://d2xsxph8kpxj0f.cloudfront.net/310519663425645252/c7JUUxiJwSoLXah9sUySh8/caramel_making-CEVfeHVhRhXAPf5oNSKcek.webp",
 };
 
+// ─── PayPal Button Links (scraped from live buygourmetcaramels.com) ──────────
+const PAYPAL_BASE = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=";
+
+const PAYPAL_LINKS: Record<string, { quarter?: string; half?: string; one?: string }> = {
+  butter:    { quarter: PAYPAL_BASE + "39S9Z6Z5UQ4R4",  half: PAYPAL_BASE + "J3KVN44KDPSR2",  one: PAYPAL_BASE + "WWJCPKEU3HW8U" },
+  licorice:  { quarter: PAYPAL_BASE + "TQLLF5SBKTNQY",  half: PAYPAL_BASE + "WCXNJ88PN4HL8",  one: PAYPAL_BASE + "RK5USWK2C5TX8" },
+  cherry:    { quarter: PAYPAL_BASE + "M5ENWQNJ7VAAN",  half: PAYPAL_BASE + "F5UY3QKSFEXAG",  one: PAYPAL_BASE + "P6FHEKJ8V3GDG" },
+  espresso:  { quarter: PAYPAL_BASE + "5FZ2CBMRDDLKE",  half: PAYPAL_BASE + "5NZHNRA9UFCCQ",  one: PAYPAL_BASE + "B9ULZHD4HPMEQ" },
+  butterrum: { quarter: PAYPAL_BASE + "83UAPVSJE23PG",  half: PAYPAL_BASE + "QZ2P6KFKCQN7N",  one: PAYPAL_BASE + "PZPKGMLVPJLX2" },
+  pecan:     { quarter: PAYPAL_BASE + "K7MLZRL4C227G",  half: PAYPAL_BASE + "KDFMK32W8CLXN",  one: PAYPAL_BASE + "SMPVABGPHY42C" },
+  salted:    { quarter: PAYPAL_BASE + "6VBU7SDKB385N",  half: PAYPAL_BASE + "KW8LFQ8GDF96L",  one: PAYPAL_BASE + "M3YCST6NMUAYJ" },
+  variety:   { half:    PAYPAL_BASE + "W5P34QEFK7R2A",  one: PAYPAL_BASE + "L5K3XP7ZMV8D6" },
+  // Custom 4-flavor 1lb pack — PayPal hosted form button
+  custom4:   {},
+};
+
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const FLAVORS = [
   {
@@ -92,9 +108,18 @@ const FLAVORS = [
     badgeColor: "#C8860A",
     emoji: "🎁",
     accent: "#C8860A",
-    description: "Can't decide? Get them all! Color-coded wrappers make each flavor easy to identify. Perfect for gifting or discovering your favorite.",
-    note: "All 7 flavors. One great gift.",
-    isVariety: true,
+    description: "Every package has all delicious flavors with color-coded wrappers: Salted (white), Butter (yellow), Pecan (orange), Butter Rum (light orange), Cherry (red), Espresso (green).",
+    note: "½ lb $20 · 1 lb $36",
+  },
+  {
+    id: "custom4",
+    name: "Choose 4 Flavors",
+    badge: "Mix & Match",
+    badgeColor: "#5B6E7A",
+    emoji: "🎨",
+    accent: "#5B6E7A",
+    description: "Can't make up your mind? Choose up to 4 different flavors in ¼ lb packages — a full 1 lb custom assortment. Call us to build your perfect box.",
+    note: "Call (509) 342-6002 to order.",
   },
 ];
 
@@ -221,22 +246,63 @@ function StarRating({ count = 5 }: { count?: number }) {
   );
 }
 
-function PriceButtons({ isVariety = false }: { isVariety?: boolean }) {
-  const sizes = isVariety
-    ? [{ label: "½ lb", price: "$20" }, { label: "1 lb", price: "$36" }]
-    : [{ label: "¼ lb", price: "$12" }, { label: "½ lb", price: "$18" }, { label: "1 lb", price: "$34" }];
+function PriceButtons({ flavorId }: { flavorId: string }) {
+  const links = PAYPAL_LINKS[flavorId] || {};
+
+  // Variety pack: ½ lb $20, 1 lb $36
+  if (flavorId === "variety") {
+    return (
+      <div className="flex flex-wrap gap-2 mt-4">
+        <a href={links.half} target="_blank" rel="noopener noreferrer"
+          className="flex-1 min-w-0 text-center px-3 py-2 border border-[oklch(0.52_0.120_58)] text-[oklch(0.52_0.120_58)] rounded text-sm font-semibold hover:bg-[oklch(0.52_0.120_58)] hover:text-white transition-all duration-200"
+          style={{ fontFamily: "var(--font-body)" }}>
+          ½ lb — $20
+        </a>
+        <a href={links.one} target="_blank" rel="noopener noreferrer"
+          className="flex-1 min-w-0 text-center px-3 py-2 border border-[oklch(0.52_0.120_58)] text-[oklch(0.52_0.120_58)] rounded text-sm font-semibold hover:bg-[oklch(0.52_0.120_58)] hover:text-white transition-all duration-200"
+          style={{ fontFamily: "var(--font-body)" }}>
+          1 lb — $36
+        </a>
+      </div>
+    );
+  }
+
+  // Custom 4-flavor pack — not yet on old site
+  if (flavorId === "custom4") {
+    return (
+      <div className="flex flex-wrap gap-2 mt-4">
+        <span className="flex-1 text-center px-3 py-2 bg-[oklch(0.93_0.025_80)] text-[oklch(0.50_0.060_58)] rounded text-xs font-semibold border border-[oklch(0.88_0.030_75)]"
+          style={{ fontFamily: "var(--font-body)" }}>
+          Call for Pricing: (509) 342-6002
+        </span>
+      </div>
+    );
+  }
+
+  // Standard flavors: ¼ lb $12, ½ lb $18, 1 lb $34
+  const sizes = [
+    { label: "¼ lb", price: "$12", href: links.quarter },
+    { label: "½ lb", price: "$18", href: links.half },
+    { label: "1 lb", price: "$34", href: links.one },
+  ];
+
   return (
     <div className="flex flex-wrap gap-2 mt-4">
-      {sizes.map((s) => (
-        <a
-          key={s.label}
-          href="tel:+15093426002"
-          className="flex-1 min-w-0 text-center px-3 py-2 border border-[oklch(0.52_0.120_58)] text-[oklch(0.52_0.120_58)] rounded text-sm font-semibold hover:bg-[oklch(0.52_0.120_58)] hover:text-white transition-all duration-200 font-body"
-          style={{ fontFamily: "var(--font-body)" }}
-        >
-          {s.label} — {s.price}
-        </a>
-      ))}
+      {sizes.map((s) =>
+        s.href ? (
+          <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+            className="flex-1 min-w-0 text-center px-3 py-2 border border-[oklch(0.52_0.120_58)] text-[oklch(0.52_0.120_58)] rounded text-sm font-semibold hover:bg-[oklch(0.52_0.120_58)] hover:text-white transition-all duration-200"
+            style={{ fontFamily: "var(--font-body)" }}>
+            {s.label} — {s.price}
+          </a>
+        ) : (
+          <span key={s.label}
+            className="flex-1 min-w-0 text-center px-3 py-2 bg-[oklch(0.93_0.025_80)] text-[oklch(0.60_0.050_58)] rounded text-xs font-semibold border border-dashed border-[oklch(0.80_0.030_75)]"
+            style={{ fontFamily: "var(--font-body)" }}>
+            Coming Soon
+          </span>
+        )
+      )}
     </div>
   );
 }
@@ -466,7 +532,7 @@ export default function Home() {
                     {flavor.note}
                   </p>
 
-                  <PriceButtons isVariety={flavor.isVariety} />
+                  <PriceButtons flavorId={flavor.id} />
                 </div>
               </div>
             ))}
@@ -575,11 +641,11 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: "🎀", title: "Variety Gift Pack", desc: "All 7 flavors in color-coded wrappers. Perfect for birthdays, holidays, and thank-you gifts.", price: "$20 – $36", cta: "Order Now", href: "tel:+15093426002" },
+              { icon: "🎀", title: "Variety Gift Pack ½ lb", desc: "All flavors in color-coded wrappers: Salted (white), Butter (yellow), Pecan (orange), Butter Rum (light orange), Cherry (red), Espresso (green).", price: "$20", cta: "Buy on PayPal", href: PAYPAL_BASE + "W5P34QEFK7R2A" },
+              { icon: "🎁", title: "Variety Gift Pack 1 lb", desc: "Double the variety — all 7 flavors in color-coded wrappers. The ultimate gift for any caramel lover.", price: "$36", cta: "Buy on PayPal", href: PAYPAL_BASE + "L5K3XP7ZMV8D6" },
               { icon: "💼", title: "Corporate Gift Orders", desc: "Bulk pricing for corporate appreciation, employee recognition, client gifts, and event favors.", price: "Call for Pricing", cta: "Call (509) 342-6002", href: "tel:+15093426002" },
-              { icon: "🎄", title: "Holiday Gift Sets", desc: "Seasonal sets for Christmas, Valentine's Day, Mother's Day, and more. Mix and match flavors.", price: "From $18", cta: "Order Now", href: "tel:+15093426002" },
-              { icon: "💒", title: "Wedding & Event Favors", desc: "Individually wrapped caramels make elegant, memorable wedding favors. Custom orders welcome.", price: "Custom Pricing", cta: "Inquire Now", href: "tel:+15093426002" },
-              { icon: "📦", title: "Sampler Set", desc: "New to Moon Creek? Try a curated sampler of our most popular flavors — the perfect introduction.", price: "From $12", cta: "Order Now", href: "tel:+15093426002" },
+              { icon: "🎄", title: "Holiday Gift Sets", desc: "Seasonal sets for Christmas, Valentine’s Day, Mother’s Day, and more. Mix and match flavors.", price: "Call for Pricing", cta: "Call (509) 342-6002", href: "tel:+15093426002" },
+              { icon: "💒", title: "Wedding & Event Favors", desc: "Individually wrapped caramels make elegant, memorable wedding favors. Custom orders welcome.", price: "Call for Pricing", cta: "Call (509) 342-6002", href: "tel:+15093426002" },
               { icon: "🚚", title: "Ships Nationwide", desc: "We ship to all 50 states. Order online or call us directly. Free shipping on orders over $50.", price: "Free Shipping $50+", cta: "Order Now", href: "tel:+15093426002" },
             ].map((item) => (
               <div key={item.title} className="border border-[oklch(0.88_0.030_75)] rounded-sm p-6 hover:border-[oklch(0.68_0.150_72/0.6)] hover:shadow-lg transition-all duration-200 bg-white">
