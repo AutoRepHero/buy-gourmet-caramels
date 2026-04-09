@@ -1,9 +1,10 @@
 /*
  * BuyGourmetCaramels.com — Home Page
  * Design: Artisan Warmth — Craftsman Era meets Modern Food Brand
- * All sections: Nav, Hero, TrustBar, Flavors, Process, Gifts, Story, Reviews, Blog, FAQ, CTA, Footer
+ * All sections: Nav, Hero, TrustBar, Flavors, Process, Gifts, Story, Reviews, Blog, Events, FAQ, CTA, Footer
  */
 import { useState, useEffect, useRef } from "react";
+import EventsSection from "@/components/EventsSection";
 
 // ─── Image CDN URLs ───────────────────────────────────────────────────────────
 const IMG = {
@@ -796,6 +797,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── EVENTS & FARMERS MARKETS ── */}
+      <EventsSection />
 
       {/* ── FAQ ── */}
       <section id="faq" className="py-24 bg-cream">
