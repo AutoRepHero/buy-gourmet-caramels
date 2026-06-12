@@ -5,7 +5,7 @@
  */
 import { useState, useEffect, useRef } from "react";
 import EventsSection from "@/components/EventsSection";
-import EmailPopup from "@/components/EmailPopup";
+// import EmailPopup from "@/components/EmailPopup"; // PAUSED — re-enable when discount codes work at checkout
 import FourPackBuilder from "@/components/FourPackBuilder";
 
 // ─── Image CDN URLs ───────────────────────────────────────────────────────────
@@ -947,8 +947,8 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* ── EMAIL CAPTURE POPUP ── */}
-      <EmailPopup />
+      {/* ── EMAIL CAPTURE POPUP (PAUSED) ── */}
+      {/* <EmailPopup /> */}
     </div>
   );
 }
