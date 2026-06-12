@@ -391,6 +391,338 @@ The best storage method is the one that matches when you plan to eat them:
 **Order fresh:** All Moon Creek caramels ship fresh from Spokane, WA. [Shop all 7 flavors](/flavors) or call (509) 342-6002.
     `,
   },
+  {
+    slug: "best-caramels-corporate-gifts",
+    category: "Gift Guide",
+    title: "Best Gourmet Caramels for Corporate Gifts in 2026",
+    metaDescription: "Looking for corporate gift ideas? Gourmet caramels are the perfect professional gift — universally loved, easy to ship, and memorable. Here's how to order in bulk.",
+    readTime: "4 min read",
+    publishDate: "2026-03-01",
+    keywords: ["corporate gift caramels", "business gifts", "bulk caramel order", "professional gift ideas"],
+    content: `
+## Best Gourmet Caramels for Corporate Gifts in 2026
+
+Finding the right corporate gift is a challenge every business faces. It needs to be universally appealing, professionally packaged, easy to ship, and memorable enough to strengthen relationships. Gourmet caramels check every box.
+
+### Why Caramels Beat Other Corporate Gifts
+
+**Universal appeal:** Unlike wine (some don't drink), flowers (short-lived), or branded merchandise (often discarded), handcrafted caramels are loved by virtually everyone. They cross cultural boundaries, dietary preferences (compared to chocolate), and age groups.
+
+**Easy logistics:** Caramels ship flat, don't require refrigeration for short periods, and arrive looking beautiful. No fragile glass, no wilting, no size concerns.
+
+**Memorable:** A box of artisan caramels from a small-batch maker in Spokane, WA tells a story. It shows you chose something special — not a generic gift basket from a catalog.
+
+**Price-appropriate:** At $18-36 per box, gourmet caramels hit the sweet spot for corporate gifting — generous enough to impress, reasonable enough for volume orders.
+
+### How to Order Corporate Gifts from Moon Creek
+
+Moon Creek Gourmet Sweets offers custom corporate gift orders:
+
+- **Variety Packs** — All 7 flavors with color-coded wrappers (½ lb $20 / 1 lb $36)
+- **Single-flavor bulk** — Choose one crowd-pleaser like Salted Caramel for consistency
+- **Custom quantities** — 10, 25, 50, or 100+ boxes
+- **Custom packaging** — Add your company card or message
+- **Direct shipping** — Ship to multiple addresses (employee homes, client offices)
+
+### Best Flavors for Corporate Gifts
+
+1. **Variety Pack** — Safest choice. Everyone finds a favorite.
+2. **Salted Caramel** — The universally loved crowd-pleaser.
+3. **Espresso** — Perfect for coffee-loving teams.
+
+### When to Send Corporate Caramels
+
+- **Holiday season** (November-December) — Client appreciation
+- **Q1 kickoff** (January) — Team motivation
+- **Client milestones** — Contract renewals, project completions
+- **Employee recognition** — Birthdays, work anniversaries, promotions
+
+---
+
+**Ready to order?** Call (509) 342-6002 for custom corporate gift pricing and bulk discounts. We ship nationwide from Spokane, WA.
+    `,
+  },
+  {
+    slug: "caramel-vs-toffee-difference",
+    category: "Caramel 101",
+    title: "Caramel vs. Toffee: What's the Difference?",
+    metaDescription: "Caramel and toffee look similar but they're completely different confections. Learn the key differences in temperature, texture, ingredients, and taste.",
+    readTime: "3 min read",
+    publishDate: "2026-03-15",
+    keywords: ["caramel vs toffee", "difference between caramel and toffee", "types of caramel candy", "caramel explained"],
+    content: `
+## Caramel vs. Toffee: What's the Difference?
+
+People often use "caramel" and "toffee" interchangeably, but they're actually quite different confections. Understanding the difference helps you appreciate what makes each one special — and why gourmet caramels have their own distinct craft.
+
+### The Key Differences
+
+| Factor | Caramel | Toffee |
+|--------|---------|--------|
+| **Temperature** | 245-250°F (firm ball stage) | 300-310°F (hard crack stage) |
+| **Texture** | Soft, chewy, pliable | Hard, brittle, snaps when broken |
+| **Cream content** | High (butter + heavy cream) | Lower (mostly butter + sugar) |
+| **Cooking time** | 15-25 minutes | 20-35 minutes |
+| **Eating experience** | Chew for 30-60 seconds | Crunch and dissolve |
+
+### It All Comes Down to Temperature
+
+The fundamental difference is cooking temperature:
+
+- **Caramel** is cooked to the "firm ball" stage (245°F). At this temperature, the sugar crystallizes into a soft, chewy structure that yields to your teeth.
+- **Toffee** is cooked to the "hard crack" stage (300°F+). The higher temperature drives out more moisture and creates a rigid, brittle candy that snaps cleanly.
+
+Same basic ingredients (sugar, butter) — completely different results based on 50 degrees of temperature difference.
+
+### Why Caramel Is Harder to Make
+
+Paradoxically, the lower temperature makes caramel MORE difficult to craft well:
+
+- The margin for error is tiny — 5°F too high and it's hard; 5°F too low and it's sticky
+- The higher cream content means more moisture to manage during cooking
+- Achieving consistent texture across batches requires experience and attention
+
+At Moon Creek, we cook every batch to precisely 245°F, monitoring with a calibrated thermometer. This narrow window is why we make caramels in small batches — you simply cannot achieve this precision in large industrial vats.
+
+### Which Should You Choose?
+
+Choose **caramel** if you prefer:
+- Soft, chewy candy you can savor
+- Rich, buttery flavor with cream notes
+- Something that melts in your mouth gradually
+
+Choose **toffee** if you prefer:
+- Crunchy, brittle candy
+- Intense butterscotch flavor
+- Quick-dissolving texture
+
+### Moon Creek's Approach
+
+All Moon Creek products are soft caramels — cooked to the perfect 245°F sweet spot where they're firm enough to hold their shape but soft enough to bite through effortlessly. Our 7 flavors showcase what caramel does best: deliver rich, layered flavors in a chewy, satisfying format.
+
+---
+
+**Taste the difference:** [Shop our 7 handcrafted caramel flavors](/flavors) — each one cooked to perfection in Spokane, WA.
+    `,
+  },
+  {
+    slug: "spokane-food-gifts-local-artisan",
+    category: "Local",
+    title: "Best Spokane Food Gifts: Local Artisan Products to Send Nationwide",
+    metaDescription: "Looking for Spokane food gifts to send? Discover the best local artisan food products from Spokane, WA that ship nationwide — including handcrafted gourmet caramels.",
+    readTime: "4 min read",
+    publishDate: "2026-04-01",
+    keywords: ["Spokane food gifts", "Spokane artisan food", "local Spokane gifts", "Washington state food gifts"],
+    content: `
+## Best Spokane Food Gifts: Local Artisan Products to Send Nationwide
+
+Spokane, Washington has a thriving artisan food scene that most people outside the Pacific Northwest don't know about. From small-batch coffee roasters to handcrafted confections, Spokane produces some of the finest food gifts in the country — and many of them ship nationwide.
+
+### Why Spokane Food Gifts Stand Out
+
+Spokane's food artisans benefit from:
+
+- **Pacific Northwest ingredients** — Access to Washington's world-class cherries, apples, berries, and dairy
+- **Small-batch culture** — Spokane's maker community values craft over volume
+- **Lower overhead** — Compared to Seattle or Portland, Spokane artisans can invest more in ingredients and less in rent
+- **Genuine passion** — These aren't venture-backed startups; they're families who love what they make
+
+### Moon Creek Gourmet Sweets: Spokane's Handcrafted Caramels
+
+Moon Creek Gourmet Sweets has been making caramels from scratch in Spokane since 2010. What makes them a standout Spokane food gift:
+
+- **7 unique flavors** including Espresso (made with Spokane's own Pitotti Coffee), Cherry (Washington Montmorency cherries), and Licorice (100% pure anise oil — the only one of its kind)
+- **No preservatives, no artificial anything** — real butter, fresh cream, natural ingredients
+- **Ships nationwide** — fresh from Spokane to any address in the US
+- **Gift-ready** — Variety packs with color-coded wrappers make beautiful presents
+
+### What Makes a Great Food Gift?
+
+The best food gifts share these qualities:
+
+1. **A story** — Where it's made, who makes it, why it's special
+2. **Quality you can taste** — Real ingredients that are obviously better than store-bought
+3. **Shareability** — Something the recipient can enjoy with family or colleagues
+4. **Shelf stability** — Arrives in perfect condition without refrigeration
+5. **Uniqueness** — Something they can't buy at their local grocery store
+
+Moon Creek caramels check all five boxes. A Licorice Caramel made with pure anise oil? You literally cannot find that anywhere else in the country.
+
+### How to Order Spokane Food Gifts
+
+Moon Creek ships to all 50 states from Spokane, WA:
+
+- **Online:** BuyGourmetCaramels.com
+- **Phone:** (509) 342-6002
+- **In person:** Spokane-area farmers markets (check our events calendar)
+
+Free shipping on orders over $50. Perfect for holidays, birthdays, corporate gifts, or "just because."
+
+---
+
+**Send a taste of Spokane:** [Shop all 7 flavors](/flavors) or build a [custom 4-pack](/flavors#four-pack).
+    `,
+  },
+  {
+    slug: "valentines-day-caramel-gifts",
+    category: "Seasonal",
+    title: "Valentine's Day Caramel Gifts: Why Gourmet Caramels Beat Chocolate",
+    metaDescription: "Skip the generic chocolate box this Valentine's Day. Gourmet caramels are a more unique, memorable, and personal gift. Here's why — and how to order.",
+    readTime: "3 min read",
+    publishDate: "2026-01-20",
+    keywords: ["Valentine's Day caramel gift", "caramel valentines", "gourmet candy gift", "Valentine's Day candy"],
+    content: `
+## Valentine's Day Caramel Gifts: Why Gourmet Caramels Beat Chocolate
+
+Every Valentine's Day, millions of heart-shaped chocolate boxes get exchanged. They're predictable, often mediocre in quality, and forgotten within a day. This year, give something that actually surprises and delights: handcrafted gourmet caramels.
+
+### Why Caramels Are the Better Valentine's Gift
+
+**1. Unexpected** — Everyone expects chocolate on Valentine's Day. Caramels show you put thought into it.
+
+**2. Higher quality per dollar** — A $20 box of Valentine's chocolate is mass-produced. A $20 box of Moon Creek caramels is handcrafted from scratch with real butter and cream.
+
+**3. More flavors to explore** — Our Variety Pack includes 7 unique flavors with color-coded wrappers. It's an experience, not just a snack.
+
+**4. Lasts longer** — Properly stored, gourmet caramels stay fresh for 4-6 weeks. That heart-shaped chocolate box? Stale by February 20th.
+
+**5. Shareable** — A box of caramels is perfect for sharing over a date night, a movie, or a quiet evening together.
+
+### Best Valentine's Caramel Picks
+
+- **For the romantic:** Classic Butter — pure, simple, elegant
+- **For the adventurous:** Variety Pack — let them discover all 7 flavors
+- **For the coffee lover:** Espresso Caramel — made with real Pitotti Coffee
+- **For the unique soul:** Licorice Caramel — one-of-a-kind, unforgettable
+
+### Valentine's Day Ordering Tips
+
+- **Order by February 8th** for guaranteed delivery by the 14th
+- **Add a personal note** — call (509) 342-6002 to include a handwritten message
+- **Ship directly** — we can send straight to your Valentine's address
+- **Pair with flowers** — caramels + a single rose = perfect combination
+
+### Price Guide for Valentine's Caramels
+
+| Option | Price | Best For |
+|--------|-------|----------|
+| ¼ lb single flavor | $12 | Sweet gesture |
+| ½ lb Variety Pack | $20 | Thoughtful gift |
+| 1 lb Variety Pack | $36 | Grand romantic gesture |
+| Custom 4-Pack | $36 | Personalized selection |
+
+---
+
+**Order your Valentine's caramels:** [Shop now](/flavors) or call (509) 342-6002. Ships fresh from Spokane, WA to anywhere in the US.
+    `,
+  },
+  {
+    slug: "christmas-caramel-gift-boxes",
+    category: "Seasonal",
+    title: "Christmas Caramel Gift Boxes: The Perfect Holiday Treat to Ship Nationwide",
+    metaDescription: "Gourmet caramel gift boxes make the perfect Christmas gift — easy to ship, universally loved, and beautifully packaged. Order handcrafted caramels for everyone on your list.",
+    readTime: "4 min read",
+    publishDate: "2026-10-15",
+    keywords: ["Christmas caramel gifts", "holiday caramel gift box", "caramel Christmas presents", "gourmet holiday gifts"],
+    content: `
+## Christmas Caramel Gift Boxes: The Perfect Holiday Treat
+
+Every holiday season, the same question comes up: what do you get for the person who has everything? The answer is simpler than you think — handcrafted gourmet caramels that ship fresh to their door.
+
+### Why Caramels Are the Perfect Christmas Gift
+
+**They're universally loved.** Unlike candles (scent preferences vary), clothing (size issues), or gadgets (they probably already have it), handcrafted caramels delight virtually everyone.
+
+**They ship beautifully.** No fragile glass, no wilting flowers, no batteries required. Caramels arrive in perfect condition via standard shipping.
+
+**They tell a story.** "These are handmade by a family in Spokane, Washington — no preservatives, real butter, seven unique flavors" is a much better story than "I got this from Amazon."
+
+**They fit any budget.** From a $12 quarter-pound stocking stuffer to a $36 full-pound luxury gift, there's an option for every name on your list.
+
+### Christmas Gift Ideas by Recipient
+
+| Who | Best Option | Price |
+|-----|-------------|-------|
+| Coworkers | ¼ lb Salted Caramel | $12 each |
+| Parents/In-Laws | 1 lb Variety Pack | $36 |
+| Best friend | Custom 4-Pack (their favorites) | $36 |
+| Teacher/Coach | ½ lb Variety Pack | $20 |
+| Stocking stuffers | ¼ lb any flavor | $12 |
+| Boss/Client | 1 lb Variety Pack + card | $36 |
+
+### Holiday Ordering Timeline
+
+- **November 1-15:** Order early for guaranteed availability of all flavors
+- **December 1-10:** Last call for standard shipping delivery by Christmas
+- **December 11-15:** Express shipping available (call for details)
+- **December 16+:** Local Spokane pickup only
+
+### Why Moon Creek for Christmas Gifts
+
+- **Handcrafted in Spokane, WA** — supporting a real family business
+- **7 unique flavors** with color-coded wrappers — beautiful presentation
+- **No preservatives** — made fresh for the holidays
+- **Ships to all 50 states** — one order, multiple addresses
+- **Bulk discounts** — ordering 10+ boxes? Call for pricing
+
+---
+
+**Start your Christmas list:** [Shop all flavors](/flavors) or call (509) 342-6002 for bulk holiday orders. Free shipping over $50.
+    `,
+  },
+  {
+    slug: "mothers-day-caramel-gift-ideas",
+    category: "Seasonal",
+    title: "Mother's Day Gift Ideas: Handcrafted Caramels She'll Actually Love",
+    metaDescription: "Skip the generic Mother's Day gifts. Handcrafted gourmet caramels are personal, luxurious, and show you put real thought into it. Order online, ships nationwide.",
+    readTime: "3 min read",
+    publishDate: "2026-04-15",
+    keywords: ["Mother's Day caramel gift", "Mother's Day candy", "gifts for mom", "gourmet gifts for her"],
+    content: `
+## Mother's Day Gift Ideas: Handcrafted Caramels She'll Actually Love
+
+Mother's Day is May 11th, and if you're tired of giving the same flowers-and-card combination every year, it's time to upgrade. Handcrafted gourmet caramels are the kind of thoughtful, luxurious treat that makes Mom feel truly appreciated.
+
+### Why Moms Love Gourmet Caramels
+
+**It's personal.** Choosing specific flavors shows you know her taste. Does she love coffee? Espresso Caramel. Adventurous? Licorice. Classic elegance? Salted Caramel.
+
+**It's indulgent.** Moms rarely splurge on themselves. A box of handcrafted caramels is a small luxury that says "you deserve this."
+
+**It's shareable.** She can enjoy them with Dad, the kids, or keep the whole box to herself (no judgment).
+
+**It arrives beautifully.** No wrapping required — our caramels come in color-coded wrappers that look gift-ready out of the box.
+
+### Best Mother's Day Caramel Picks
+
+1. **Variety Pack (1 lb, $36)** — All 7 flavors. She can discover her favorite.
+2. **Cherry Caramel (½ lb, $18)** — Made with real Washington Montmorency cherries. Elegant and fruity.
+3. **Custom 4-Pack ($36)** — Choose 4 flavors you know she'll love.
+4. **Salted Caramel (½ lb, $18)** — The universally adored classic.
+
+### Mother's Day Ordering Tips
+
+- **Order by May 3rd** for guaranteed delivery by Mother's Day (May 11th)
+- **Ship directly to Mom** — we'll send it straight to her address
+- **Add a phone call** — call (509) 342-6002 to include a personal message
+- **Pair with tea or coffee** — caramels + her favorite beverage = perfect afternoon treat
+
+### What Makes This Better Than Flowers
+
+| Factor | Flowers | Gourmet Caramels |
+|--------|---------|------------------|
+| Lasts | 5-7 days | 4-6 weeks |
+| Shareable | Not really | Absolutely |
+| Unique | Generic | 7 handcrafted flavors |
+| Story | From a florist | From a family in Spokane |
+| Price | $40-80 | $18-36 |
+| Enjoyment | Visual only | Tastes amazing |
+
+---
+
+**Order Mom's caramels:** [Shop now](/flavors) or call (509) 342-6002. Ships fresh from Spokane, WA. Free shipping over $50.
+    `,
+  },
 ];
 
 // ─── Blog List Page ───────────────────────────────────────────────────────────

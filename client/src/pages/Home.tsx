@@ -5,6 +5,8 @@
  */
 import { useState, useEffect, useRef } from "react";
 import EventsSection from "@/components/EventsSection";
+import EmailPopup from "@/components/EmailPopup";
+import FourPackBuilder from "@/components/FourPackBuilder";
 
 // ─── Image CDN URLs ───────────────────────────────────────────────────────────
 const IMG = {
@@ -798,6 +800,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── BUILD YOUR OWN 4-PACK ── */}
+      <FourPackBuilder />
+
       {/* ── EVENTS & FARMERS MARKETS ── */}
       <EventsSection />
 
@@ -942,6 +947,8 @@ export default function Home() {
         </div>
       </footer>
 
+      {/* ── EMAIL CAPTURE POPUP ── */}
+      <EmailPopup />
     </div>
   );
 }
