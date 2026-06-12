@@ -1,0 +1,11 @@
+# BuyGourmetCaramels.com - Moon Creek Gourmet Sweets
+# https://buygourmetcaramels.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://buygourmetcaramels.com/sitemap.xml
+
+# Crawl-delay (be polite)
+Crawl-delay: 1
