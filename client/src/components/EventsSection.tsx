@@ -1,9 +1,9 @@
 /**
- * EventsSection — Live Google Calendar Integration
+ * EventsSection — Live Google Calendar Integration (Client-Side)
  * Design: Dark caramel/gold theme — matches site aesthetic
  * Calendar: buygourmetcaramels@gmail.com (public calendar)
  * Auto-updates: Events added to Google Calendar appear here within minutes
- * No API key required — uses public iCal/JSON feed
+ * No backend required — uses public Google Calendar API
  */
 
 import { useEffect, useState } from "react";
@@ -19,13 +19,10 @@ interface CalendarEvent {
   allDay: boolean;
 }
 
-// Google Calendar public JSON feed
-// Calendar ID: buygourmetcaramels@gmail.com
+// Google Calendar public API
 const CALENDAR_ID = "buygourmetcaramels@gmail.com";
-const CALENDAR_API_URL = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events`;
 
-// Fallback: use Google Calendar public iCal feed parsed via a CORS proxy
-// or display placeholder events when no events are scheduled
+// Fallback placeholder events
 const PLACEHOLDER_EVENTS: CalendarEvent[] = [
   {
     id: "placeholder-1",
@@ -47,16 +44,13 @@ const PLACEHOLDER_EVENTS: CalendarEvent[] = [
   },
 ];
 
-function formatEventDate(date: Date, allDay: boolean): string {
+function formatEventDate(date: Date): string {
   const options: Intl.DateTimeFormatOptions = {
     weekday: "short",
     month: "short",
     day: "numeric",
     year: "numeric",
   };
-  if (!allDay) {
-    return date.toLocaleDateString("en-US", options);
-  }
   return date.toLocaleDateString("en-US", options);
 }
 
@@ -93,18 +87,21 @@ export default function EventsSection() {
     setError(null);
 
     try {
-      // Use Google Calendar's public iCal feed via a reliable CORS-friendly approach
-      // Google provides a public JSON feed for public calendars
+      // Use Google Calendar public API (no API key required for public calendars)
       const now = new Date().toISOString();
       const sixMonthsLater = new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toISOString();
 
-      // Try Google Calendar public API (works when calendar is public, no API key needed for basic feed)
-      const feedUrl = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&timeMin=${now}&timeMax=${sixMonthsLater}&singleEvents=true&orderBy=startTime&maxResults=10`;
+      // Google Calendar public API endpoint (works for public calendars)
+      const feedUrl = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events?timeMin=${now}&timeMax=${sixMonthsLater}&singleEvents=true&orderBy=startTime&maxResults=10&showDeleted=false`;
 
       const response = await fetch(feedUrl);
 
       if (!response.ok) {
-        throw new Error(`Calendar fetch failed: ${response.status}`);
+        // If API fails, use placeholder
+        setEvents(PLACEHOLDER_EVENTS);
+        setUsingPlaceholder(true);
+        setLoading(false);
+        return;
       }
 
       const data = await response.json();
@@ -143,6 +140,7 @@ export default function EventsSection() {
       }
     } catch (err) {
       // Fallback to placeholder events on any error
+      console.error("Calendar fetch error:", err);
       setEvents(PLACEHOLDER_EVENTS);
       setUsingPlaceholder(true);
     }
@@ -152,6 +150,9 @@ export default function EventsSection() {
 
   useEffect(() => {
     fetchEvents();
+    // Refresh every 5 minutes
+    const interval = setInterval(fetchEvents, 5 * 60 * 1000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -292,7 +293,7 @@ export default function EventsSection() {
           <p style={{ color: "#6B5535", fontSize: "0.75rem", fontFamily: "sans-serif" }}>
             Can't make it in person?{" "}
             <a
-              href="tel:+15093280680"
+              href="tel:+15093426002"
               style={{ color: "#C8860A", textDecoration: "none" }}
             >
               Call us
@@ -435,13 +436,14 @@ function EventCard({ event }: { event: CalendarEvent }) {
           <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
             <Clock size={12} color="#C8860A" style={{ flexShrink: 0 }} />
             <span style={{ fontSize: "0.8rem", color: "#C8A96A", fontFamily: "sans-serif" }}>
-              {formatEventDate(event.start, event.allDay)} &nbsp;·&nbsp; {formatEventTime(event.start, event.end, event.allDay)}
+              {formatEventTime(event.start, event.end, event.allDay)}
             </span>
           </div>
+
           {event.location && (
             <div style={{ display: "flex", alignItems: "flex-start", gap: "0.4rem" }}>
-              <MapPin size={12} color="#C8860A" style={{ flexShrink: 0, marginTop: "2px" }} />
-              <span style={{ fontSize: "0.8rem", color: "#C8A96A", fontFamily: "sans-serif", lineHeight: "1.4" }}>
+              <MapPin size={12} color="#C8860A" style={{ flexShrink: 0, marginTop: "0.15rem" }} />
+              <span style={{ fontSize: "0.8rem", color: "#C8A96A", fontFamily: "sans-serif", lineHeight: "1.3" }}>
                 {event.location}
               </span>
             </div>
@@ -449,20 +451,8 @@ function EventCard({ event }: { event: CalendarEvent }) {
         </div>
 
         {event.description && (
-          <p
-            style={{
-              fontSize: "0.8rem",
-              color: "#A08060",
-              fontFamily: "sans-serif",
-              lineHeight: "1.5",
-              margin: 0,
-              display: "-webkit-box",
-              WebkitLineClamp: 2,
-              WebkitBoxOrient: "vertical",
-              overflow: "hidden",
-            }}
-          >
-            {event.description.replace(/<[^>]*>/g, "")}
+          <p style={{ fontSize: "0.8rem", color: "#A89070", fontFamily: "sans-serif", lineHeight: "1.4", margin: "0.4rem 0 0" }}>
+            {event.description}
           </p>
         )}
       </div>
@@ -474,30 +464,20 @@ function NoEventsCard() {
   return (
     <div
       style={{
-        textAlign: "center",
-        padding: "3rem 2rem",
-        background: "rgba(44,30,10,0.5)",
-        border: "1px solid rgba(200,134,10,0.2)",
+        background: "linear-gradient(135deg, rgba(44,30,10,0.8), rgba(26,18,8,0.9))",
+        border: "1px solid rgba(200,134,10,0.25)",
         borderRadius: "10px",
-        maxWidth: "480px",
-        margin: "0 auto",
+        padding: "2.5rem",
+        textAlign: "center",
+        color: "#C8A96A",
       }}
     >
-      <Calendar size={40} color="rgba(200,134,10,0.4)" style={{ margin: "0 auto 1rem" }} />
-      <h3
-        style={{
-          fontFamily: "'Playfair Display', Georgia, serif",
-          color: "#C8A96A",
-          marginBottom: "0.5rem",
-          fontSize: "1.2rem",
-        }}
-      >
-        No Upcoming Events Scheduled
+      <Calendar size={40} style={{ margin: "0 auto 1rem", color: "#C8860A", opacity: 0.6 }} />
+      <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.2rem", color: "#F5C842", marginBottom: "0.5rem" }}>
+        No Upcoming Events
       </h3>
-      <p style={{ color: "#6B5535", fontFamily: "sans-serif", fontSize: "0.85rem", lineHeight: "1.6" }}>
-        Check back soon — we're always at local Spokane markets and events.
-        <br />
-        Or order online and we'll ship right to your door.
+      <p style={{ fontSize: "0.9rem", lineHeight: "1.6", margin: "0 auto", maxWidth: "400px" }}>
+        We're planning our 2026 event schedule. Check back soon for upcoming farmers markets and local events where you can taste Moon Creek caramels in person.
       </p>
     </div>
   );
